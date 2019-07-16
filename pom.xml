@@ -13,7 +13,6 @@
             <groupId>com.datastax.cassandra</groupId>
             <artifactId>cassandra-driver-core</artifactId>
             <version>${cassandra-driver-core.version}</version>
-            <optional>true</optional>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.cassandraunit/cassandra-unit -->
@@ -23,6 +22,20 @@
             <version>${cassandra-unit.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${sl4j.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -31,9 +44,13 @@
 
     <properties>
         <!-- Cassandra -->
+        <java.version>1.8</java.version>
         <cassandra-driver-core.version>3.7.0</cassandra-driver-core.version>
         <cassandra-unit.version>3.1.1.0</cassandra-unit.version>
-        <guava.version>18.0</guava.version>
+        <guava.version>23.0</guava.version>
+        <sl4j.version>1.7.25</sl4j.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
 </project>
